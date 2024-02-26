@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jasna Idnina</title>
+    <style>
+        main h1 {
+            text-align: center;
+            padding: 10px 0 20px 0;
+            font-size: 3em;
+        }
+
+        .cover-text h1 {
+            margin-bottom: 130px;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        main {
+            padding: 25px 0 25px 0;
+            background-color: #AFC8AD;
+        }
+
+        .about-section h2 {
+            text-align: center;
+        }
+
+        .about-section p {
+            width: 50%;
+            margin: 0 auto;
+            padding: 10px 0 50px 0;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        .goals-objectives-container {
+            display: flex;
+            justify-content: space-between;
+            /* You can adjust this value to add spacing between the sections */
+            gap: 20px;
+        }
+
+        .goals-section,
+        .objectives-section {
+            flex-basis: calc(50% - 10px); /* 50% width for each section, considering gap */
+        }
+
+        .goals-section, .objectives-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .goals-container, .objectives-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .goals-container h2, .objectives-container h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .goal-item, .objective-item {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .goal-content, .objective-content {
+            flex: 1;
+            text-align: justify;
+        }
+
+        .goal-content h3, .objective-content h3 {
+            color: #555;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .goal-content p, .objective-content p {
+            width: 60%;
+            margin: 10px auto;
+            color: #777;
+        }
+
+        .site-footer-container {
+            background-color: #AFC8AD;
+            padding: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 375px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div id="logo">
+        <img src="img/JasnaIdnina.png" alt="Logo">
+        <h1>Association Jasna Idnina</h1>
+    </div>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="past-projects.html">Past Projects</a>
+    </nav>
+</header>
+
+<!-- MAIN SECTION -->
+<main>
+    <h1>About Us</h1>
+    <section class="about-section">
+        <h2>Our Story</h2>
+        <p>The Association "Jasna Idnina" was founded in Nebregovo, Dolneni, Prilep in December 2008 by a group of young people.
+            The activities which Jasna Idnina implements have a national and international character, the majority of them being
+            international. The members of Jasna Idnina put their efforts into the development of a sustainable structure that will
+            be able to support, assist and provide consulting and education services to young people for a long period of time, in
+            a way to become a regional youth center in order to meet the association's main objectives.</p>
+    </section>
+    <section class="about-section">
+        <h2>Our Mission</h2>
+        <p>Non-formal education is an important part of the association's work, a tool which we use on a regular basis to
+            satisfy the educational needs of local young people from rural areas (which comprise our main target group) and to
+            support and develop human capacities in rural areas. The main aim of our activities is to provide learning and
+            employment opportunities to young people from rural areas, a lot of them having fewer opportunities due to
+            geographical, educational and economic obstacles. Jasna Idnina's target group is young people that are between the
+            ages of 15 to 30, from Nebregovo and the other rural areas around Prilep, as well as the city of Prilep. The
+            association strives to promote lifelong learning among other things, and that is why it works on activities which
+            would include the general population of rural and remote areas.</p>
+    </section>
+</main>
+
+
+<div class="goals-objectives-container">
+    <!-- GOALS -->
+    <section class="goals-section">
+        <div class="goals-container">
+            <h2>Jasna Indina's Goals</h2>
+            <div class="goal-item">
+                <div class="goal-content">
+                    <h3>Goal 1</h3>
+                    <p>Bringing young people together on a basis of equity, regardless of their national,
+                        religious, educational, social or economic belonging.</p>
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-content">
+                    <h3>Goal 2</h3>
+                    <p>Affirmation of young people through their individual capabilities and uniqueness.</p>
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-content">
+                    <h3>Goal 3</h3>
+                    <p>Bringing young people together to increase their mutual cooperation and joint work in the future.</p>
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-content">
+                    <h3>Goal 4</h3>
+                    <p>Providing educational opportunities for young people, and adult learners too, to develop entrepreneurship among them.</p>
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-content">
+                    <h3>Goal 5</h3>
+                    <p>Nurturing creativity and culture, as well as using creativity and art as a means for alternative thinking in modern industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJECTIVES -->
+    <section class="objectives-section">
+        <div class="objectives-container">
+            <h2>Jasna Idnina's Main Objectives</h2>
+            <div class="objective-item">
+                <div class="objective-content">
+                    <h3>Objective 1</h3>
+                    <p>Organization of seminars, lectures, sports events, concerts, competitions for the purpose of a better
+                        introduction to young people's cultures.</p>
+                </div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-content">
+                    <h3>Objective 2</h3>
+                    <p>Assisting and mediation between young people by using their distinctiveness and skills.</p>
+                </div>
+            </div>
+            <div class="objective-item">
+                <div class="objective-content">
+                    <h3>Objective 3</h3>
+                    <p>Supporting international youth exchanges of high schoolers, as well as winter and summer youth exchanges
+                        of young people to become better acquainted with the culture and traditions of other peoples.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer-container">
+    <div class="footer-content">
+        <p>&copy; 2024 Association Jasna Idnina. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

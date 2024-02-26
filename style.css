@@ -1,0 +1,332 @@
+* {
+    font-family: "Tahoma", sans-serif;
+    line-height: 1.5em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #11181F;
+    background-color: #fff;
+}
+
+/* Navigation Bar */
+
+header {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Navigation Bar - LOGO */
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover img {
+    transform: scale(1.1); /* Enlarge the logo on hover */
+}
+
+/* Navigation Bar - More Content */
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #11181F;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #88AB8E; /* Change link color on hover */
+}
+
+/* Intro - Cover Image with Text */
+
+.cover-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust the height of your cover image */
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.cover-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.cover-text p {
+    font-size: 1.5em;
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    opacity: 0.6;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.cover-text .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #fff;
+    opacity: 1;
+}
+
+/* Future Projects Section */
+summary {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.future-projects {
+    padding: 70px 50px 70px 70px;
+}
+
+.fp-block-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fp-block-column {
+    width: 48%; /* Adjust column width as needed */
+}
+
+.fp-block-heading {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.fp-block-details {
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.fp-block-details details {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.fp-block-details p {
+    font-size: 0.8em;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.fp-block-separator {
+    border: none;
+    height: 2px;
+    background-color: #ddd; /* Adjust separator color as needed */
+    margin: 20px 0;
+}
+
+.has-foreground-color,
+.has-text-color,
+.has-link-color {
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* TESTIMONIES */
+
+.wp-block-group {
+    background-color: #AFC8AD;
+    padding: 50px;
+}
+
+.wp-block-heading {
+    line-height: 1.2;
+}
+
+.wp-block-columns {
+    text-align: justify;
+    display: flex;
+}
+
+.wp-block-column {
+    flex: 1;
+}
+
+.wp-block-column p {
+    width: 80%;
+    font-size: 15px;
+}
+
+.wp-block-column p strong {
+    font-size: 16px;
+}
+
+/* CONTACT FORM */
+
+.contact-section {
+    padding: 70px 50px; /* Adjust padding as needed */
+}
+
+.contact-content {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#first-name, #last-name {
+    width: 50%;
+}
+
+input[type=submit] {
+    background-color: #88AB8E;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #AFC8AD;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container form label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.container form input[type="text"],
+.container form textarea {
+    flex: 1;
+    width: calc(100% - 10px); /* Adjust to leave space for the label */
+    margin-bottom: 10px;
+}
+
+.container form input[type="submit"] {
+    width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 16px;
+    color: #11181F;
+}
+
+/* FOOTER */
+
+.site-footer-container {
+    background-color: #AFC8AD;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h3 {
+    color: #333;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jasna Idnina</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #AFC8AD;
+            font-family: Helvetica, sans-serif;
+        }
+        button {
+            background-color: #88AB8E;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 150px;
+            margin-left: 145px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #AFC8AD;
+        }
+        #past-projects {
+            text-align: center;
+            font-size: 3em;
+        }
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+            padding: 25px 0 25px 0;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #88AB8E;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border-width: 10px 0 10px 10px;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border-width: 10px 10px 10px 0;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            width: 500px;
+            overflow: auto;
+        }
+
+        .content p {
+            text-align: justify;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+            /* Place the time-lime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .container::before {
+                left: 60px;
+                border-width: 10px 10px 10px 0;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0;
+            }
+        }
+        .site-footer-container {
+            background-color: #fff;
+            padding: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 375px;
+            margin: 0 auto;
+        }
+        /* Hide description box by default */
+        .description-box {
+            display: none;
+        }
+        /* Show description box when toggled */
+        .description-box.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div id="logo">
+        <img src="img/JasnaIdnina.png" alt="Logo">
+        <h1>Association Jasna Idnina</h1>
+    </div>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="past-projects.html">Past Projects</a>
+    </nav>
+</header>
+
+<div>
+    <h1 id="past-projects">Past Projects</h1>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>The Inclusion Of Young People Through Dance And Popular Songs </h2>
+                <p>9-15 October 2023, San Lorenzo del Escorial</p>
+                <button class="myButton">Show more..</button>
+                <div class="description-box">
+                    <p>The Erasmus project had as a main activity a youth exchange where youngsters from European and Arabic
+                        countries gathered together to exchange experiences and work on the topic of inclusion using the means
+                        of dance and songs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Respect and Equality: Acting and Communicating Together </h2>
+                <p>05-13 September 2023, Tsakhkadzor, Armenia</p>
+                <button class="myButton">Show more..</button>
+                <div class="description-box">
+                    <p>The project aims to equip youth workers with enhanced skills and methodologies to effectively address hate
+                        speech and its detrimental effects on young individuals. By tailoring training sessions to the specific
+                        needs of diverse youth populations, including minority groups and refugees, the project endeavors to
+                        empower youth workers in facilitating proactive, group-led responses to hate-related conflicts.
+                        Additionally, it seeks to foster a deeper understanding of the impact of hate speech, encouraging youth
+                        workers to challenge oppressive power structures through youth work methods.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Youngsters Tell Digital Stories About Cultural Diversity </h2>
+                <p>17-26 February, Oldemarkt, Netherlands</p>
+                <button class="myButton">Show more..</button>
+                <div class="description-box">
+                    <p>The project aims to foster inclusivity and intercultural dialogue by enhancing participants'
+                        understanding of discrimination, intolerance, and environmental sustainability. Through activities
+                        such as digital storytelling and photography, participants will develop skills in creativity, teamwork,
+                        and intercultural communication. Additionally, the project seeks to raise awareness of societal challenges
+                        faced by diverse cultural groups and promote active engagement in combating discrimination within
+                        communities. Finally, it aims to empower participants to explore Erasmus+ opportunities, encouraging
+                        their continued participation in future projects aimed at promoting European identity and peace.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Think Critical, Be Logical</h2>
+                <p>Brolo, Sicily, Italy</p>
+                <button class="myButton">Show more..</button>
+                <div class="description-box">
+                    <p>The project’s main activity was a training course which took place in Brolo, Sicily, Italy.
+                        The project topic was critical thinking, fighting fake news and creating tools for youth work
+                        which will help them in situations when critical thinking is required so that they can make the
+                        right decisions about their lives as a whole.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Lead Me Up</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Step Forward</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Do. Not. Bully. Me!</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>The Skill To Be Free </h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer-container">
+    <div class="footer-content">
+        <p>&copy; 2024 Association Jasna Idnina. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Get all project titles
+    let projectTitles = document.querySelectorAll('.myButton');
+
+    // Loop through each title and add click event listener
+    projectTitles.forEach(title => {
+        title.addEventListener('click', function() {
+            // Toggle visibility of description box
+            let descriptionBox = this.nextElementSibling;
+            descriptionBox.classList.toggle('show');
+        });
+    });
+
+</script>
+
+</body>
+</html>
